@@ -50,14 +50,32 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public V get(K key) {
 		// TODO
-		
+		if(key == null) {
+			throw new NullPointerException("Key == null");
+		}
+		for(Entry<K,V> e : data) {
+			if(e != null) {
+				if(e.getKey() == key) {
+					return e.getValue();
+				}
+			}
+		}
 		return null;
-		
 	}
 
 	@Override
 	public boolean containsKey(K key) {
 		// TODO
+		//if(key == null) {
+		//	throw new NullPointerException("Key == null");
+		//}
+		for(Entry<K,V> e : data) {
+			if(e != null) {
+				if(e.getKey() == key) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
