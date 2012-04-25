@@ -3,7 +3,7 @@
 import java.util.List;
 
 /**
- * Schnittstelle fuer Klassen, die assoziativ einem Schlï¿½sselobjekt eine anderes.
+ * Schnittstelle fuer Klassen, die assoziativ einem Schlüsselobjekt eine anderes.
  * Objekt zuordnen.
  * <p>
  * Grundsaetzlich duerfen null-Referenzen nicht als Schluessel auftauchen.
