@@ -106,7 +106,7 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 				data[i] = null;
 				size--;
 			}
-			return value;
+			return value; 
 		}
 		return null;
 	}
@@ -124,10 +124,10 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	* @return Index des ersten Vorkommens oder -1 wenn nicht gefunden.
 	*/
 	public int indexOf(K gesucht) {
-
+		
 		for (int i=0;i<data.length;i++) {
 			if(data[i] != null) { 
-				if(data[i].getKey().equals(gesucht)) { 
+				if(data[i].getKey().equals(gesucht)) {
 					return i;
 				}
 			}

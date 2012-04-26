@@ -135,6 +135,7 @@ public class LinearMapTest {
         objTable.put(K1, "x");
         objTable.put(K2, "a");
         objTable.put(K3, K1);
+        
         assertEquals("a", objTable.remove(K2));
         assertNull("der Schlüssel wurde wohl nicht entfernt",
                 objTable.remove(K2));
