@@ -46,16 +46,12 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		int iOf = indexOf(key);
 		if(iOf == -1) {
 			data[size++] = new Entry<K,V>(key, value);
-			if(size-2 > 0) {
-				return data[size-2].getValue();
-			}
+			return null;
 		} else {
+			V valueBefore = data[iOf].getValue();
 			data[iOf] = new Entry<K,V>(key, value);
-			if(iOf - 2 > 0) {
-				return data[iOf-2].getValue();
-			}
+			return valueBefore;
 		}
-		return null;
 	}
 
 	@Override
@@ -102,6 +98,15 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		// TODO
 		if(key == null) {
 			throw new NullPointerException("Key == null");
+		}
+		if(containsKey(key)) {
+			int i = indexOf(key);
+			V value = get(key);
+			if(value != null) {
+				data[i] = null;
+				size--;
+			}
+			return value;
 		}
 		return null;
 	}
