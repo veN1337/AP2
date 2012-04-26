@@ -43,7 +43,18 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		if(key == null) {
 			throw new NullPointerException("Key == null");
 		}
-		data[size++] = new Entry<K,V>(key, value);
+		int iOf = indexOf(key);
+		if(iOf == -1) {
+			data[size++] = new Entry<K,V>(key, value);
+			if(size-2 > 0) {
+				return data[size-2].getValue();
+			}
+		} else {
+			data[iOf] = new Entry<K,V>(key, value);
+			if(iOf - 2 > 0) {
+				return data[iOf-2].getValue();
+			}
+		}
 		return null;
 	}
 
@@ -55,7 +66,7 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		}
 		for(Entry<K,V> e : data) {
 			if(e != null) {
-				if(e.getKey() == key) {
+				if(e.getKey().equals(key)) {
 					return e.getValue();
 				}
 			}
@@ -66,9 +77,10 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public boolean containsKey(K key) {
 		// TODO
-		//if(key == null) {
-		//	throw new NullPointerException("Key == null");
-		//}
+		if(key == null) {
+			throw new NullPointerException("Key == null");
+		}
+		/*
 		for(Entry<K,V> e : data) {
 			if(e != null) {
 				if(e.getKey() == key) {
@@ -77,11 +89,20 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 			}
 		}
 		return false;
+		*/
+		
+		if(indexOf(key) != -1) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
 	public V remove(K key) {
 		// TODO
+		if(key == null) {
+			throw new NullPointerException("Key == null");
+		}
 		return null;
 	}
 
@@ -98,19 +119,16 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	* @return Index des ersten Vorkommens oder -1 wenn nicht gefunden.
 	*/
 	public int indexOf(K gesucht) {
-		/*
+
 		for (int i=0;i<data.length;i++) {
 			if(data[i] != null) { 
-				if(data[i].equals(gesucht)) { 
+				if(data[i].getKey().equals(gesucht)) { 
 					return i;
 				}
-			}else if(data[i] == gesucht) {
-				return i;
 			}
 		}
 		return -1;
-		*/
-		return java.util.Arrays.asList(data).indexOf(gesucht);
+
 	}
 
     
