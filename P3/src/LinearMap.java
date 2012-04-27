@@ -99,11 +99,13 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		if(key == null) {
 			throw new NullPointerException("Key == null");
 		}
-		if(containsKey(key)) {
-			int i = indexOf(key);
+		int i = indexOf(key);
+		if(i != -1) {
 			V value = get(key);
 			if(value != null) {
-				data[i] = null;
+				for(int j = i;j<data.length-1;j++) {
+					data[j] = data[j+1];
+				}
 				size--;
 			}
 			return value; 
