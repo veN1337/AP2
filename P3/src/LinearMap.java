@@ -40,6 +40,7 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public V put(K key, V value) {
 		// TODO
+		if(size == data.length) adjustArrayLength();
 		if(key == null) {
 			throw new NullPointerException("Key == null");
 		}
@@ -116,6 +117,12 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public List<K> keys() {
 		// TODO
+		List<K>[] liste = new List<K>[100];
+		for(Entry<K,V> e : data) {
+			if(e != null) {
+				liste.add(e.getKey());
+			}
+		}	
 		return null;
 	}
 	
@@ -138,6 +145,14 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 
 	}
 
-    
+	private void adjustArrayLength() {
+		// TODO Auto-generated method stub
+		Entry<K,V>[] data2 = newArray(size);
+		data2 = data.clone();
+		data = newArray(size*2);
+		for(int i=0;i<data2.length;i++) {
+			data[i] = data2[i];
+		}
+	}
     
 }
