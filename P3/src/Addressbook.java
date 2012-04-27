@@ -102,37 +102,40 @@ public final class Addressbook implements IAddressbook {
 	@Override
 	public void addAddress(IAddress address) {
 		// TODO Auto-generated method stub
-		
+		addresses.put(address.nickname(), address);
 	}
 
 	@Override
 	public IAddress addressOf(String name) {
 		// TODO Auto-generated method stub
-		return null;
+		return addresses.get(name);
 	}
 
 	@Override
 	public boolean contains(String name) {
 		// TODO Auto-generated method stub
+		if(addresses.containsKey(name)) {
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public void remove(String name) {
 		// TODO Auto-generated method stub
-		
+		addresses.remove(name);
 	}
 
 	@Override
 	public List<String> nicknames() {
 		// TODO Auto-generated method stub
-		return null;
+		return addresses.keys();
 	}
 
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return 0;
+		return addresses.size();
 	}
     
 }
