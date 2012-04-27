@@ -1,3 +1,6 @@
+package ui;
+import book.Addressbook;
+
 /**
  * Main-Klasse für eine einfache Adressbuchanwendung im
  */
