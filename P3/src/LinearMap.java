@@ -117,7 +117,7 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public List<K> keys() {
 		// TODO
-		List<K>[] liste = new List<K>[100];
+		List<K> liste = new List();
 		for(Entry<K,V> e : data) {
 			if(e != null) {
 				liste.add(e.getKey());
