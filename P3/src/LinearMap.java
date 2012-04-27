@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -117,13 +118,13 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 	@Override
 	public List<K> keys() {
 		// TODO
-		List<K> liste = new List();
+		List<K> liste = new ArrayList<K>();
 		for(Entry<K,V> e : data) {
 			if(e != null) {
 				liste.add(e.getKey());
 			}
 		}	
-		return null;
+		return liste;
 	}
 	
 	/**
