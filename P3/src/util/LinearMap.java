@@ -59,7 +59,7 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 
 	@Override
 	public V get(K key) {
-		//TODO
+		// TODO
 		if(key == null) {
 			throw new NullPointerException("Key == null");
 		}
