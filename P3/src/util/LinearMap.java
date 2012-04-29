@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  Die Klasse implementiert ein Verzeichnis, in dem nach
+ * Die Klasse implementiert ein Verzeichnis, in dem nach
  * unter einem Schluessel gespeicherten Daten gesucht werden
  * kann.
  */
