@@ -1,5 +1,5 @@
-<h1>Hallo</h1>
+<h1>Hallo</h1><br />
 Das hier ist meine Repo zu AP2<br />
-<b>Nur kopieren hilft nicht!</b><br />
+<b>Nur kopieren hilft nich!</b><br />
 <br />
-Bei Fragen: <a href="mailto:srothkop@smail.fh-koeln.de>srothkop@smail.fh-koeln.de</a>
+Bei Fragen: <a href="mailto:srothkop@smail.fh-koeln.de">srothkop@smail.fh-koeln.de</a>
