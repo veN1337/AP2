@@ -49,9 +49,11 @@ public class ArrayTest {
     	assertEquals(0, a.indexOf(t1));
     	assertEquals(2, a.indexOf(t3));
     	assertEquals(-1, a.indexOf(7));
+    	assertEquals(-1, a.indexOf(700));
     	assertEquals(-1, a.indexOf(null));
     	a.add(null);
     	assertEquals(4, a.indexOf(null));
+    	assertEquals(-1, a.indexOf(700));
     }
     
     @Test

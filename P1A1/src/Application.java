@@ -16,7 +16,7 @@ import javax.swing.JTextField;
  * This is the graphical interface for class
  * <code>FinancialHistory</code>.
  * 
- * @author Erich Ehses
+ * @author  Erich Ehses
  *
  */
 public class Application extends JFrame {
