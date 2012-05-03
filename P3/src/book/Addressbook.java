@@ -104,19 +104,16 @@ public final class Addressbook implements IAddressbook {
     }
 // TODO: fehlende Methoden implementieren.
 
-	@Override
 	public void addAddress(IAddress address) {
 		// TODO Auto-generated method stub
 		addresses.put(address.nickname(), address);
 	}
 
-	@Override
 	public IAddress addressOf(String name) {
 		// TODO Auto-generated method stub
 		return addresses.get(name);
 	}
 
-	@Override
 	public boolean contains(String name) {
 		// TODO Auto-generated method stub
 		if(addresses.containsKey(name)) {
@@ -125,19 +122,16 @@ public final class Addressbook implements IAddressbook {
 		return false;
 	}
 
-	@Override
 	public void remove(String name) {
 		// TODO Auto-generated method stub
 		addresses.remove(name);
 	}
 
-	@Override
 	public List<String> nicknames() {
 		// TODO Auto-generated method stub
 		return addresses.keys();
 	}
 
-	@Override
 	public int size() {
 		// TODO Auto-generated method stub
 		return addresses.size();

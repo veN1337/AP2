@@ -33,13 +33,11 @@ public  class LinearMap<K,V> implements IMap<K,V> {
     /* TODO: Die Klasse soll richtig vervollstaendigt werden.
      */
     
-	@Override
 	public int size() {
 		// TODO
 		return size;
 	}
 
-	@Override
 	public V put(K key, V value) {
 		// TODO
 		if(size == data.length) adjustArrayLength();
@@ -57,7 +55,6 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		}
 	}
 
-	@Override
 	public V get(K key) {
 		// TODO
 		if(key == null) {
@@ -73,7 +70,6 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		return null;
 	}
 
-	@Override
 	public boolean containsKey(K key) {
 		// TODO
 		if(key == null) {
@@ -96,7 +92,6 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		return false;
 	}
 
-	@Override
 	public V remove(K key) {
 		// TODO
 		if(key == null) {
@@ -116,7 +111,6 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 		return null;
 	}
 
-	@Override
 	public List<K> keys() {
 		// TODO
 		List<K> liste = new ArrayList<K>();
