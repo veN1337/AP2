@@ -22,11 +22,15 @@ final class WhiteToken extends AbstractToken {
 	 */
 	protected Token nextGeneration(int neighbours) {
 		// TODO: richtige Regel einsetzen.
-		return null;
+		if( neighbours == 3) {
+			return BlackToken.instance();
+			
+		}
+		return instance;
 	}
 
 	public boolean isBlack() {
 		// TODO: richtige Rueckgabe einsetzen.
-		return true;
+		return false;
 	}
 }

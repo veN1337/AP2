@@ -9,7 +9,12 @@ public abstract class AbstractToken implements Token {
 	 */
 	private int blackNeighbours(Token[] neighbours) {
 		// TODO: Anzahl der schwarzen Nachbarn bestimmen.
-		return 0;
+		int anz = 0;
+		for( Token neighbour : neighbours) {
+			if ( neighbour.isBlack() )
+				anz++;
+			}
+		return anz;
 	}
 	
 	/**

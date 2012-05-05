@@ -38,7 +38,7 @@ public class Main extends JFrame {
     public static void main(String[] args) {
     	// true = zufaelliger Anfang
     	// false = R-Pentomino
-    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, false);
+    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, true);
         Main f = new Main(thisWorld);
         f.repaint();
         int generations = 1;

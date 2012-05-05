@@ -24,7 +24,10 @@ final class BlackToken extends AbstractToken {
 	 */
 	protected Token nextGeneration(int neighbours) {
 		// TODO: richtige Regel einsetzen
-		return null;
+		if( neighbours == 3 || neighbours == 2) {
+			return this;
+		}
+		return WhiteToken.instance();
 	}
 
 	/**
@@ -33,6 +36,6 @@ final class BlackToken extends AbstractToken {
 	 */
 	public boolean isBlack() {
 	// TODO: richtige Rueckgabe einsetzen.
-		return false;
+		return true;
 	}
 }
