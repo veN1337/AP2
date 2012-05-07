@@ -38,7 +38,7 @@ public final class Addressbook implements IAddressbook {
      * <p>
      * Dieser Konstruktor ist vorwiegend fuer Testzwecke da.
      */
-    Addressbook() {
+    public Addressbook() {
     }
 
     /**

@@ -9,7 +9,7 @@ package util;
  * <code>getTotalCompares</code> und <code>getCompares</code>
  * deren Zahl abgefragt werden kann.
  */
-class TestKey implements Comparable<TestKey> {
+public class TestKey implements Comparable<TestKey> {
     private static int totalCompares = 0;
     private int compares = 0;
 
