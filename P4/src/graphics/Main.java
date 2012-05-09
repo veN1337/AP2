@@ -38,7 +38,8 @@ public class Main extends JFrame {
     public static void main(String[] args) {
     	// true = zufaelliger Anfang
     	// false = R-Pentomino
-    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, true);
+    	
+    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, false);
         Main f = new Main(thisWorld);
         f.repaint();
         int generations = 1;
@@ -47,6 +48,7 @@ public class Main extends JFrame {
         	delay(200);
         	thisWorld.computeNextGeneration();
         	f.repaint();
+        	f.setTitle("Game of Life - " + generations);
         }
     } 
     
