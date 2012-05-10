@@ -11,11 +11,11 @@ package objects;
 class R_Pentomino extends AbstractWorld {
 	R_Pentomino(int nx, int ny) {
 		super(nx, ny);
-		/*set(75, 75, BlackToken.instance());
+		set(75, 75, BlackToken.instance());
 		set(76, 75, BlackToken.instance());
 		set(74, 74, BlackToken.instance());
 		set(75, 74, BlackToken.instance());
-		set(75, 73, BlackToken.instance());*/
+		set(75, 73, BlackToken.instance());
 		
 		//QUADRAT
 		/*set(50, 50, BlackToken.instance());
@@ -51,7 +51,8 @@ class R_Pentomino extends AbstractWorld {
 		set(58, 55, BlackToken.instance());
 		set(58, 56, BlackToken.instance());
 		set(58, 57, BlackToken.instance());*/
-		
+		/*
+		//Fünfzehnkämpfer
 		set(50, 50, BlackToken.instance());
 		set(55, 50, BlackToken.instance());
 		set(50, 52, BlackToken.instance());
@@ -65,16 +66,45 @@ class R_Pentomino extends AbstractWorld {
 		set(56, 51, BlackToken.instance());
 		set(57, 51, BlackToken.instance());
 		
+		//Tümmler
 		set(80, 50, BlackToken.instance());
 		set(81, 50, BlackToken.instance());
-		set(83, 50, BlackToken.instance());
-		set(84, 50, BlackToken.instance());
+		set(80, 51, BlackToken.instance());
 		set(81, 51, BlackToken.instance());
 		set(83, 50, BlackToken.instance());
+		set(84, 50, BlackToken.instance());
+		set(83, 51, BlackToken.instance());
+		set(84, 51, BlackToken.instance());
 		set(81, 52, BlackToken.instance());
 		set(83, 52, BlackToken.instance());
 		set(81, 53, BlackToken.instance());
 		set(83, 53, BlackToken.instance());
-		set(81, 50, BlackToken.instance());
+		set(81, 54, BlackToken.instance());
+		set(83, 54, BlackToken.instance());
+		set(80, 55, BlackToken.instance());
+		set(84, 55, BlackToken.instance());
+		set(85, 55, BlackToken.instance());
+		set(79, 55, BlackToken.instance());
+		set(79, 54, BlackToken.instance());
+		set(79, 53, BlackToken.instance());
+		set(85, 53, BlackToken.instance());
+		set(85, 54, BlackToken.instance());
+		
+		//Spaceship
+		set(50, 70, BlackToken.instance());
+		set(51, 70, BlackToken.instance());
+		set(52, 70, BlackToken.instance());
+		set(53, 70, BlackToken.instance());
+		set(54, 70, BlackToken.instance());
+		set(55, 70, BlackToken.instance());
+		set(55, 71, BlackToken.instance());
+		set(55, 72, BlackToken.instance());
+		set(54, 73, BlackToken.instance());
+		set(51, 74, BlackToken.instance());
+		set(52, 74, BlackToken.instance());
+		set(49, 71, BlackToken.instance());
+		set(49, 73, BlackToken.instance());
+		set(79, 55, BlackToken.instance());*/
+		
 	}
 }

@@ -39,13 +39,13 @@ public class Main extends JFrame {
     	// true = zufaelliger Anfang
     	// false = R-Pentomino
     	
-    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, false);
+    	AbstractWorld thisWorld = AbstractWorld.createWorld(150, 150, true);
         Main f = new Main(thisWorld);
         f.repaint();
         int generations = 1;
         while (true) {
         	f.generations.setText(String.valueOf(generations++));
-        	delay(200);
+        	delay(20);
         	thisWorld.computeNextGeneration();
         	f.repaint();
         	f.setTitle("Game of Life - " + generations);
