@@ -40,10 +40,10 @@ public  class LinearMap<K,V> implements IMap<K,V> {
 
 	public V put(K key, V value) {
 		// TODO
-		if(size == data.length) adjustArrayLength();
 		if(key == null) {
 			throw new NullPointerException("Key == null");
 		}
+		if(size == data.length) adjustArrayLength();
 		int iOf = indexOf(key);
 		if(iOf == -1) {
 			data[size++] = new Entry<K,V>(key, value);
