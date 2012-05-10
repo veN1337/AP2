@@ -24,7 +24,6 @@ final class WhiteToken extends AbstractToken {
 		// TODO: richtige Regel einsetzen.
 		if( neighbours == 3) {
 			return BlackToken.instance();
-			
 		}
 		return instance;
 	}
