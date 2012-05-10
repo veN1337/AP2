@@ -1,3 +1,4 @@
+package book;
 import book.*;
 
 import static org.junit.Assert.*;
