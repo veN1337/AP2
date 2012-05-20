@@ -5,7 +5,8 @@ public enum Algorithm {
     QuickSort(new Quicksort()),
     MergeSort(new Mergesort()),
     InsertionSort(new Insertionsort()),
-    SelectionSort(new Selectionsort());
+    SelectionSort(new Selectionsort()),
+    BubbleSort(new Bubblesort());
     
     private final IntSort sorter;
     private Algorithm(IntSort sorter) {

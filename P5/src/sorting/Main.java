@@ -10,7 +10,7 @@ public class Main {
         int[] sizes = { 100, 1000, 10000, 100000 };
         
         TestOfSortingAlgorithms.traceOf(
-                EnumSet.of(SelectionSort, InsertionSort, MergeSort), a);
+                EnumSet.of(SelectionSort, InsertionSort, MergeSort, BubbleSort), a);
         TestOfSortingAlgorithms.performanceOf(
                 EnumSet.allOf(Algorithm.class), sizes);
     }
