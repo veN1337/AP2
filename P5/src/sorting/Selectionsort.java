@@ -27,6 +27,20 @@ public class Selectionsort implements IntSort {
         for (int i = 0; i < array.length - 1; i++) {
             Tracer.direct(array, i);
             // TODO: durch Teilagorithmus ersetzen
+            int ai = array[i];
+            int pos = i;
+            
+            for (int j = i+1; j < array.length; j++) {
+            	if (array[j] < ai) {
+	            	ai = array[j];
+	            	pos = j;
+            	}
+            }
+            
+            if (i != pos) {
+            	array[pos] = array[i];
+            	array[i] = ai;
+            }
         }
         Tracer.array(array);
     }
