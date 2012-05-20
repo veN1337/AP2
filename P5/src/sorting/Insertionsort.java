@@ -27,6 +27,14 @@ public class Insertionsort implements IntSort {
         for (int i = 1; i < array.length; i++) {
             Tracer.direct(array, i);
             // TODO: durch Teilagorithmus ersetzen
+            int ai = array[i];
+            int pos = i;
+            
+            while(pos > 0 && array[pos-1] > ai) {
+            	array[pos] = array[--pos];
+            }
+            
+            array[pos] = ai;            
         }
         Tracer.array(array);
     }
