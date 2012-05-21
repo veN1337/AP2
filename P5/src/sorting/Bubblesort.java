@@ -28,11 +28,11 @@ public class Bubblesort implements IntSort {
 		for( int i = 0; i < array.length; i++ ) {
 			Tracer.direct(array, i);
 
-			for( int j = 0; j < array.length - 1; j++ ) {
-				if( array[j] > array[j + 1] ) {
+			for(int j = i; j > 0; j--) {
+				if(array[j] < array[j-1]) {
 					int tmp = array[j];
-					array[j] = array[j+1];
-					array[j+1] = tmp;
+					array[j] = array[j-1];
+					array[j-1] = tmp;
 				}
 			}
 		}
