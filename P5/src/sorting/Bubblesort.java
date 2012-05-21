@@ -4,7 +4,7 @@ public class Bubblesort implements IntSort {
 	/**
 	 * Der Algorithmus BubbleSort (direktes Vertauschen) funktioniertwie folgt:
 	 * <p>
-	 * Für jeden Durchlauf der äußeren Schlleife geht man das Feld beginned mit
+	 * FÃ¼r jeden Durchlauf der Ã¤uÃŸeren Schleife geht man das Feld beginned mit
 	 * a[i] durch.
 	 * Dabei vergleicht man 2 aufeinander folgende Feldinhalte und vertauscht sie,
 	 * falls sie in der falschen Reihenfolge stehen
@@ -30,17 +30,13 @@ public class Bubblesort implements IntSort {
 
 			for( int j = 0; j < array.length - 1; j++ ) {
 				if( array[j] > array[j + 1] ) {
-					swap( array, j, j+1 );
+					int tmp = array[j];
+					array[j] = array[j+1];
+					array[j+1] = tmp;
 				}
 			}
 		}
 		Tracer.array(array);
-	}
-
-	private void swap( int[] array, int a, int b ) {
-		int temp = array[a];
-		array[a] = array[b];
-		array[b] = temp;
 	}
 
 }
