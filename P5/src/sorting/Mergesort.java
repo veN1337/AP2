@@ -51,27 +51,27 @@ public class Mergesort implements IntSort {
      */
     protected void merge(int[] src, int[] dest, int lo, int mid, int hi) {
         // TODO: durch Teilagorithmus ersetzen
-    	int start_left = lo;
-    	int end_left = mid;
-    	int start_right = mid;
-    	int end_right = hi;
-    	int dest_index = lo;
+    	int anfang_l = lo;
+    	int ende_l = mid;
+    	int anfang_r = mid;
+    	int ende_r = hi;
+    	int dest_pos = lo;
 
-    	while( start_left < end_left && start_right < end_right ) {
-	    	if ( src[start_left] < src[start_right] ) {
-	    		dest[dest_index++] = src[start_left++];
+    	while(anfang_l < ende_l && anfang_r < ende_r) {
+	    	if (src[anfang_l] < src[anfang_r]) {
+	    		dest[dest_pos++] = src[anfang_l++];
 	    	} else {
-	    		dest[dest_index++] = src[start_right++];
+	    		dest[dest_pos++] = src[anfang_r++];
 	    	}
     	}
 
-    	if ( start_right == end_right ) {
-	    	while ( start_left < end_left ) {
-		    	dest[dest_index++] = src[start_left++];
+    	if (anfang_r == ende_r) {
+	    	while (anfang_l < ende_l) {
+		    	dest[dest_pos++] = src[anfang_l++];
 		    }
     	} else {
-		    while ( start_right < end_right ) {
-		    	dest[dest_index++] = src[start_right++];
+		    while (anfang_r < ende_r) {
+		    	dest[dest_pos++] = src[anfang_r++];
 	    	}
     	}
     }
