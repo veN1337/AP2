@@ -4,7 +4,6 @@ import java.util.Random;
 public class Quicksort implements IntSort {
     private static Random r = new Random();
     
-    @Override
     public void sort(int[] array) {
         qs(array, 0, array.length);
         Tracer.array(array);

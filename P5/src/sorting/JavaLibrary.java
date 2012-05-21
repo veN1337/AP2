@@ -6,7 +6,6 @@ import java.util.Arrays;
  */
 public class JavaLibrary implements IntSort {
 
-    @Override
     public void sort(int[] array) {
         Arrays.sort(array);
     }

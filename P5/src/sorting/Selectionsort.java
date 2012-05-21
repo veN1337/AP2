@@ -22,7 +22,6 @@ public class Selectionsort implements IntSort {
      * * </pre>
      * Der Strich | trennt den sortierten von dem unsortierten Teil.
      */
-    @Override
     public void sort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             Tracer.direct(array, i);

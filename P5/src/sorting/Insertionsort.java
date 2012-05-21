@@ -22,7 +22,7 @@ public class Insertionsort implements IntSort {
      * </pre>
      * Der Strich | trennt den sortierten von dem unsortierten Teil.
      */
-    @Override
+
     public void sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             Tracer.direct(array, i);

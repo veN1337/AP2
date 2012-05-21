@@ -23,7 +23,6 @@ public class Bubblesort implements IntSort {
 	 * Der Strich | trennt den sortierten von dem unsortierten Teil.
 	 */
 	
-	@Override
 	public void sort(int[] array) {
 		for( int i = 0; i < array.length; i++ ) {
 			Tracer.direct(array, i);
