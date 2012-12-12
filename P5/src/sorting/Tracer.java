@@ -4,6 +4,9 @@ package sorting;
  * Diese Klasse dient dazu, moeglichst einfach den Ablauf eines
  * Sortierverfahrens ueber Kontrollausgaben verstaendlich zu machen.
  */
+ 
+ // Kommentar zum testen
+ 
 public final class Tracer {  
 	private Tracer() {}
 	
